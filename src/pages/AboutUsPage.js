@@ -1,10 +1,10 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 function AboutUs(props){
     return(
         <>
-        <p>اینجا صفحه درباره ما است</p>
-        <a href="/">go to home page</a>
+        <p>this is about us page</p>
+        {/* <Link to="/">go to home page</Link> */}
         </>
     )
 }

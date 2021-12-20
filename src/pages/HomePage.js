@@ -1,9 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function HomePage(props){
     return(
         <>
-        <p>اینجا صفحه خانه است</p>
+        <p>this is home page</p>
+        {/* <Link to="/about-us">go to about us page</Link> */}
         </>
     )
 }
