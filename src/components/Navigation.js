@@ -1,20 +1,30 @@
-import { Link, withRouter } from "react-router-dom"; 
+import { Link, NavLink, withRouter } from "react-router-dom"; 
 
-const Navigation = (props) => {
-    console.log(props)
+const items =[
+  {name: "Home", to: "/", exact: true},
+  {name: "About-us", to: "/about-us"},
+  {name: "Profile", to: "/profile"}
+]
+
+const Navigation = ({Location}) => {
     return ( 
-      <header>
         <nav>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about-us">About-Us</Link>
-            </li>
+            {items.map((item) => {
+              return(
+                <li>
+                  <NavLink
+                  to={item.to}
+                  activeClassName="activeLink"
+                  exact={item.exact || false}
+                  >
+                    {item.name}
+                  </NavLink>
+                </li>
+              )
+            })} 
            </ul>
          </nav>
-      </header>
      );
 }
  

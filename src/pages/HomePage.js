@@ -2,9 +2,7 @@
 function HomePage(props){
     
     return(
-        <>
-        <p>this is home page</p>
-        </>
+        <p>This is home page !</p>
     )
 }
 

@@ -2,9 +2,7 @@
 function AboutUs(props){
 
     return(
-        <>
-        <p>this is about us page</p>
-        </>
+        <p>This is about us page !</p>
     )
 }
 
