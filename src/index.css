@@ -8,7 +8,7 @@ body{
 }
 ul{
     background-color: #e9d6ec;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     list-style: none;
     position: center;
@@ -20,6 +20,8 @@ li{
     padding: 0 10px;
     font-family: Arial;
     font-weight: bold;
+    list-style: none;
+    padding-left: 20px;
 }
 a{
     text-decoration: none;
@@ -41,4 +43,10 @@ h2{
 }
 footer{
     background-color: #ccc;
+    color: rgb(87, 87, 87);
+    font-size: 19px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
