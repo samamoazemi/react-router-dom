@@ -1,10 +1,11 @@
-import { Link, NavLink, withRouter } from "react-router-dom"; 
+import { NavLink, withRouter } from "react-router-dom"; 
 
 const items =[
   {name: "Home", to: "/", exact: true},
   {name: "About-us", to: "/about-us"},
   {name: "Profile", to: "/profile"},
-  {name: "blogs", to: "/blogs"}
+  {name: "Blogs", to: "/blogs"},
+  {name: "Post", to: "/post"}
 ]
 
 const Navigation = ({Location}) => {
