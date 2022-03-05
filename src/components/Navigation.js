@@ -1,4 +1,4 @@
-import { NavLink, withRouter } from "react-router-dom"; 
+import { NavLink } from "react-router-dom"; 
 
 const items =[
   {name: "Home", to: "/", exact: true},
@@ -30,4 +30,4 @@ const Navigation = ({Location}) => {
      );
 }
  
-export default withRouter(Navigation);
+export default Navigation;
