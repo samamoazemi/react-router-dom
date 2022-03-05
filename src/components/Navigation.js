@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"; 
+import { useParams, NavLink } from "react-router-dom"; 
 
 const items =[
   {name: "Home", to: "/", exact: true},
@@ -8,7 +8,9 @@ const items =[
   {name: "Post", to: "/post"}
 ]
 
-const Navigation = ({Location}) => {
+const Navigation = () => {
+  const params = useParams();
+
     return ( 
         <nav>
           <ul>
@@ -17,7 +19,7 @@ const Navigation = ({Location}) => {
                 <li>
                   <NavLink
                   to={item.to}
-                  activeClassName="activeLink"
+                  className={(navData) => (navData.isActive ? "activeLink" : "") }
                   exact={item.exact || false}
                   >
                     {item.name}
