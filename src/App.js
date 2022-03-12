@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Blog from "./components/Blog";
 import Layout from "./layout/Layout";
 import AboutUs from "./pages/AboutUsPage";
@@ -17,7 +17,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/post/:id([0-9]+)?" element={<PostPage/>} />
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<Navigate replace to="/blogs" />} />
         </Routes>
       </Layout>
     </BrowserRouter>
