@@ -1,17 +1,21 @@
-import { Route, Routes } from "react-router-dom";
 import Dashboard from "../components/Dashboard";
 import Downloads from "../components/Downloads";
 import SideBar from "../components/SideBar";
+import { Outlet, useNavigate } from "react-router";
 
 const Profile = () => {
+  // click a button => !!!
+  // const history = useHistory();
+  const navigate = useNavigate();
+  navigate("/blogs");
+
   return (
     <>
       <p>Welcome to your profile !</p>
-      <SideBar />
-      <Routes>
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="downloads" element={<Downloads />} />
-      </Routes>
+      <div>
+        <SideBar />
+        <Outlet />
+      </div>
     </>
   );
 };
