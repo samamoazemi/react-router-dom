@@ -14,9 +14,9 @@ function App() {
         <Routes>
           <Route path="/blogs/:id" element={<Blog />} />
           <Route path="/blogs" element={<BlogPage />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/about-us" element={<AboutUs/>} />
-          <Route path="/post/:id([0-9]+)?" element={<PostPage/>} />
+          <Route path="/profile/*" element={<Profile />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/post/:id([0-9]+)?" element={<PostPage />} />
           <Route path="/" element={<Navigate replace to="/blogs" />} />
         </Routes>
       </Layout>
